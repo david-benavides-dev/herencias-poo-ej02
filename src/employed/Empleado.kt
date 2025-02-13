@@ -13,6 +13,6 @@ abstract class Empleado(private val nombre: String, val id: Int) {
      *
      */
     override fun toString(): String {
-        return "$nombre con ID-${id.toString().padStart(4, '0')} tiene un salario de ${String.format("%.2f", calcularSalario())} al mes."
+        return "$nombre con ID-${"%04d".format(id)} tiene un salario de ${String.format("%.2f", calcularSalario())} al mes."
     }
 }
